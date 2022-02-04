@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css?h=c2cd6f3f03048985338d131849447f65">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css?h=c2cd6f3f03048985338d131849447f65">
     <link rel="stylesheet" href="assets/css/styles.min.css?h=ba5e7668fd836634b1fffab139374e8e">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap1.min.css">
     <link rel="stylesheet" href="assets/css/s.css">
 </head>
 
 <body class="body-bg">
     <nav  class="navbar navbar-light navbar-expand-lg sticky-top shadow navigation-clean-search">
-        <div  class="container ">
+        <div  class="container " >
             <a class=" c navbar-brand link-light border-white" style="font-weight: bold;font-size: 26px;">RADICAL</a>
             <button data-bs-toggle="collapse" class="navbar-toggler shadow-none justify-content-center align-items-center"
                     data-bs-target="#navcol-1"
@@ -55,10 +56,10 @@
                         <a class="c nav-link" href="#about" style="color: var(--bs-white);">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c" href="#team" style="color: var(--bs-white);">OUR TEAM</a>
+                        <a id="t" class="nav-link c " href="#team" style="color: var(--bs-white);">OUR TEAM</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link c" href="#port" style="color: var(--bs-white);">PROTFOLIO</a>
+                        <a id="p" class="nav-link c" href="#portfolio" style="color: var(--bs-white);">PROTFOLIO</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -102,10 +103,10 @@
             </div>
         </header>
     </section>
-    <section id="about" style="border-style: none;">
+    <section id="about" style="border-style: none; padding-bottom: 0px;">
         <div style="background: var(--bs-gray-900);height: 780px;border-style: none;color: rgb(0,0,0);"></div>
     </section>
-    <section id="team">
+    <section id="team" style="padding-top: 0px;">
         <section class="team-boxed">
             <div class="container">
                 <div class="intro">
@@ -171,10 +172,35 @@
             </div>
         </section>
     </section>
-    <section id="port" style="height: 768px;">
-        <div class="text-white" style="height: 768px;"></div>
-    </section>
-    <section id="contact" style="color: var(--bs-white);background: var(--bs-white);height: 646.6px;">
+    <!-- <section id="port" style="height: 768px;"> -->
+        <section style="padding-top: 0px;" id="portfolio" class="portfolio">
+            <div  class="container">
+                <h2 class="text-uppercase text-center " style="color: white;">Portfolio</h2>
+                <hr style="border-color: white;" class="star-dark mb-5">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-1" data-bs-toggle="modal">
+                            <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                                <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="assets/img/portfolio/cabin.png">
+                        </a></div>
+                    <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-2" data-bs-toggle="modal">
+                            <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                                <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="assets/img/portfolio/weatherapp.png">
+                        </a></div>
+                    <div class="col-md-6 col-lg-4"><a class="d-block mx-auto portfolio-item" href="#portfolio-modal-3" data-bs-toggle="modal">
+                            <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
+                                <div class="text-center text-white my-auto portfolio-item-caption-content w-100"><i class="fa fa-search-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="assets/img/portfolio/tindog.png">
+                        </a></div>
+                        
+                    
+                   
+                </div>
+            </div>
+        </section>
+    <!-- </section> -->
+    <section id="contact" style="color: var(--bs-white);background: var(--bs-white);height: 646.6px; padding: 0px;">
         <section class="contact-clean" style="height: 646.6px;">
             <form action="mailto:radicalsolutions3@gmail.com" method="post">
                 <h2 class="text-center">Contact us</h2>
@@ -218,7 +244,7 @@
                     <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#">
                         <i class="icon ion-social-snapchat"></i>
                     </a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                    <p class="copyright">Company Name © 2022</p>
+                    <p style="background-color: transparent;" class="copyright">Company Name © 2022</p>
                 </div>
             </div>
         </div>
@@ -226,6 +252,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assets/js/fn.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js?h=5488c86a1260428f0c13c0f8fb06bf6a"></script>
+    <script src="assets/js/script1.min.js"></script>
 </body>
 
 </html>
