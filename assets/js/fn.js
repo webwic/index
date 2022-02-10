@@ -17,18 +17,22 @@ var top5 = $('#about').offset().top;
 var top1 = $('#team').offset().top;
 var top2 = $('#portfolio').offset().top;
 var top3 = $('#contact').offset().top;
+var top6 = $('#service').offset().top;
 
 
-$("#t").click(function(){
+$("#t").click(function () {
   $('.c').css('color', 'black');
 });
 
-$(document).scroll(function() {
+$(document).scroll(function () {
   var scrollPos = $(document).scrollTop();
-  if(scrollPos >= top4 && scrollPos < top1){
+  if (scrollPos >= top4 && scrollPos < top6) {
     $('.c').css('color', 'white');
-  
-}else if (scrollPos >= top1 && scrollPos < top2) {
+  } else if (scrollPos > top4 && scrollPos < top5) {
+    $('.c').css('color', 'black');
+  } else if (scrollPos > top4 && scrollPos < top1) {
+    $('.c').css('color', 'white');
+  } else if (scrollPos >= top1 && scrollPos < top2) {
     $('.c').css('color', 'black');
   } else if (scrollPos >= top2 && scrollPos < top3) {
     $('.c').css('color', 'white');
