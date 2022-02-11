@@ -91,10 +91,12 @@
                             and retaining potential customers directly.&nbsp;<br>
                             Your never late to take the next step which provides you with the best opportunity to make
                             yourself visible around the globe .
-                        </p><button class="btn btn-light btn-lg action-button" type="button">
-                            <a class="nav-link" href="http://127.0.0.1:5500/learnmore.html"> Learn
+                    <form action="/learn" method="POST">
+                        </p><button class="btn btn-light btn-lg action-button" type="submit">
+                            <a class="nav-link"> Learn
                                 More</a>
                         </button>
+                    </form>
                     </div>
                     <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder"
                         style="background: url(&quot;assets/img/fabio-oyXis2kALVg-unsplash.jpg?h=895c73c1844b2462ddf18acc5a6a428e&quot;) center / contain no-repeat;opacity: 0.65;">
@@ -222,6 +224,7 @@
                                 <br> --jQuery &nbsp;&nbsp;&nbsp; --MySQl <br>
                                  --MongoDB Database <br>
                                  --Microsoft Azure .
+                                 <br>
                             </p>
                             <div class="social">
                                 <a href="https://www.facebook.com/mohammed.ziyad.739"><i
@@ -301,14 +304,15 @@
         <section class="contact-clean" style="height: 646.6px;">
             <p  style="color: grey; text-align: center;"> Feel Free to Contact us on <span style="color: aqua;"  >&nbsp;<a href="mailto:info@webwic.com">info@webwic.com</a></span><br>
          leave a comment our team will reach you</p>
-            <form action="mailto:radicalsolutions3@gmail.com" method="post">
+            <form class="email" action="mailto:radicalsolutions3@gmail.com" method="post">
                 <h2 class="text-center">Contact us</h2>
-                <div class="mb-3"><input required class="form-control" type="text" name="name" placeholder="Name"></div>
-                <div class="mb-3"><input required class="form-control " type="email" name="email" placeholder="Email">
+                <div class="mb-3"><input id="name" required class="form-control" type="text" name="name" placeholder="Name"></div>
+                <div class="mb-3"><input id="email" required class="form-control " type="email" name="email" placeholder="Email">
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea>
+                    <textarea id="message" class="form-control" name="message" placeholder="Message" rows="14"></textarea>
                 </div>
+                <p id="po" style="color: green;"> </p>
                 <div class="mb-3"><button class="btn btn-primary" type="submit">send </button></div>
             </form>
         </section>
@@ -329,25 +333,25 @@
                 <div class="col-sm-4 col-md-3 text-white item">
                     <h3>About</h3>
                     <ul>
-                        <li><a href="#">Company</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Legacy</a></li>
+                        <li><a href="#about">Company</a></li>
+                        <li><a href="#team">Team</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-white item">
-                    <h3>Careers</h3>
+                    <h3>Contact Info</h3>
                     <ul>
-                        <li><a href="#">Job openings</a></li>
-                        <li><a href="#">Employee success</a></li>
-                        <li><a href="#">Benefits</a></li>
+                        <li><a href="https://wa.me/7025996690">7025996690</a></li>
+                        <li><a href="mailto:info@webwic.com">info@webwic.com</a></li>
+                        <li><a href="#">www.webwic.com</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 text-white item social">
-                    <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
-                            class="icon ion-social-twitter"></i></a><a href="#">
-                        <i class="icon ion-social-snapchat"></i>
-                    </a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                    <p style="background-color: transparent;" class="copyright">Company Name © 2022</p>
+                   <a href="https://twitter.com/WebWic"><i
+                            class="icon ion-social-twitter"></i></a><a href="http://www.linkedin.com/in/webwic">
+                        <i class="icon ion-social-linkedin"></i>
+                    </a><a href="https://www.instagram.com/webwic/"><i class="icon ion-social-instagram"></i></a>
+                    <p style="background-color: transparent;" class="copyright">copyright © 2022</p>
                 </div>
             </div>
         </div>

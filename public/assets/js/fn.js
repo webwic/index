@@ -39,3 +39,41 @@ $(document).scroll(function () {
     $('.c').css('color', 'black');
   }
 });
+const contactForm = document.querySelector(".email");
+let name = document.getElementById('name');
+let email = document.getElementById('email');
+let message = document.getElementById('message');
+contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    let formData = {
+        name: name.value,
+        email: email.value,
+        message: message.value
+    }
+   
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "/");
+    xhr.setRequestHeader('content-type', 'application/json');
+    xhr.onload = function(){
+        console.log(xhr.responseText);
+        if(xhr.responseText == "success"){
+          const para = document.getElementById("po");
+          const textNode = document.createTextNode("Message has been sent. Our team will reach you shortly");
+          para.appendChild(textNode);
+          setTimeout(function(){
+            para.remove();
+          }, 3000);
+          
+            name.value = "";
+            email.value ="";
+            message.value = "";
+        }else{
+          
+          const para = document.getElementById("po");
+          para.style.color = "red";
+          const textNode = document.createTextNode("Invalid! Try Again");
+          para.appendChild(textNode);   
+        }
+    }
+    xhr.send(JSON.stringify(formData));
+});

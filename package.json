@@ -16,7 +16,10 @@
   },
   "homepage": "https://github.com/webwic/index#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "multiparty": "^4.2.3",
+    "nodemailer": "^6.7.2"
   },
   "description": ""
 }
