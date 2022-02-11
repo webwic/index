@@ -61,7 +61,8 @@ contactForm.addEventListener('submit', function(e){
           const textNode = document.createTextNode("Message has been sent. Our team will reach you shortly");
           para.appendChild(textNode);
           setTimeout(function(){
-            para.remove();
+            textNode.remove();
+            
           }, 3000);
           
             name.value = "";
@@ -72,7 +73,7 @@ contactForm.addEventListener('submit', function(e){
           const para = document.getElementById("po");
           para.style.color = "red";
           const textNode = document.createTextNode("Invalid! Try Again");
-          para.appendChild(textNode);   
+          textNode.appendChild(textNode);   
         }
     }
     xhr.send(JSON.stringify(formData));
