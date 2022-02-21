@@ -21,11 +21,12 @@ app.post("/", function(req, res){
     }
   })
   const subject = "Message from " + req.body.email + " Client Name: " + req.body.name; 
+  
   const mailOptions = {
     from: req.body.email,
     to: "webwicsol@gmail.com",
     subject: subject,
-    Text: req.body.message
+    text: req.body.message
 
   }
   transporter.sendMail(mailOptions, function(error, info){
