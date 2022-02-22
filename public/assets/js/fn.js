@@ -19,7 +19,13 @@ let name = document.getElementById('name');
 let email = document.getElementById('email');
 let message = document.getElementById('message');
 contactForm.addEventListener('submit', function(e){
+  
+  
     e.preventDefault();
+    const loading = document.getElementById("loading");
+    loading.style.visibility= "visible";
+    loading.setAttribute("src", "assets/img/loading.gif");
+    loading.setAttribute("width", "30px");
     let formData = {
         name: name.value,
         email: email.value,
@@ -32,6 +38,7 @@ contactForm.addEventListener('submit', function(e){
     xhr.onload = function(){
         console.log(xhr.responseText);
         if(xhr.responseText == "success"){
+          loading.style.visibility= "hidden";
           const para = document.getElementById("po");
           const textNode = document.createTextNode("Message has been sent. Our team will reach you shortly");
           para.appendChild(textNode);
@@ -44,7 +51,7 @@ contactForm.addEventListener('submit', function(e){
             email.value ="";
             message.value = "";
         }else{
-          
+          loading.remove();
           const para = document.getElementById("po");
           para.style.color = "red";
           const textNode = document.createTextNode("Invalid! Try Again");
