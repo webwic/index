@@ -10,7 +10,10 @@ app.use(express.json());
 
 app.get("/",function(req, res){
     res.sendFile(__dirname + "/index.html");
-})
+});
+app.get("/sitemap.xml", function(req, res){
+  res.sendFile(__dirname + "/sitemap.xml");
+});
 app.post("/", function(req, res){
   
   const transporter = nodemailer.createTransport({
