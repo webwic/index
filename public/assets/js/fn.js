@@ -6,9 +6,9 @@
 //           $(".c").css("color" , "black");
 //         }else if(scroll > 1601){
 //             $(".c").css("color" , "white");
-//         }  
+//         }
 //         else{
-//             $(".c").css("color" , "white");  	
+//             $(".c").css("color" , "white");
 //         }
 //     })
 //   })
@@ -19,8 +19,8 @@ let name = document.getElementById('name');
 let email = document.getElementById('email');
 let message = document.getElementById('message');
 contactForm.addEventListener('submit', function(e){
-  
-  
+
+
     e.preventDefault();
     const loading = document.getElementById("loading");
     loading.style.visibility= "visible";
@@ -31,7 +31,7 @@ contactForm.addEventListener('submit', function(e){
         email: email.value,
         message: message.value
     }
-   
+
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "/");
     xhr.setRequestHeader('content-type', 'application/json');
@@ -44,9 +44,9 @@ contactForm.addEventListener('submit', function(e){
           para.appendChild(textNode);
           setTimeout(function(){
             textNode.remove();
-            
+
           }, 3000);
-          
+
             name.value = "";
             email.value ="";
             message.value = "";
@@ -55,7 +55,7 @@ contactForm.addEventListener('submit', function(e){
           const para = document.getElementById("po");
           para.style.color = "red";
           const textNode = document.createTextNode("Invalid! Try Again");
-          textNode.appendChild(textNode);   
+          textNode.appendChild(textNode);
         }
     }
     xhr.send(JSON.stringify(formData));
