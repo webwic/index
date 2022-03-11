@@ -19,7 +19,7 @@ app.post("/", function(req, res){
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth:{
-      user: "webwicsol@gmail.com",
+      user: "webwicquery@gmail.com",
       pass: process.env.PASSWORD
     }
   })
@@ -27,7 +27,7 @@ app.post("/", function(req, res){
   
   const mailOptions = {
     from: req.body.email,
-    to: "webwicsol@gmail.com",
+    to: "webwicquery@gmail.com",
     subject: subject,
     text: req.body.message
 
