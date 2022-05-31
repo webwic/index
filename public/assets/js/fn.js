@@ -16,6 +16,7 @@
 
 const contactForm = document.querySelector(".email");
 let name = document.getElementById('name');
+
 let email = document.getElementById('email');
 let message = document.getElementById('message');
 contactForm.addEventListener('submit', function(e){
@@ -26,7 +27,9 @@ contactForm.addEventListener('submit', function(e){
     loading.style.visibility= "visible";
     loading.setAttribute("src", "assets/img/loading.gif");
     loading.setAttribute("width", "30px");
+    
     let formData = {
+      
         name: name.value,
         email: email.value,
         message: message.value
