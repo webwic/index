@@ -15,8 +15,6 @@ app.get("/sitemap.xml", function(req, res){
   res.sendFile(__dirname + "/sitemap.xml");
 });
 app.post("/", function(req, res){
-  console.log(req.body.email);
-  if(req.body.email === "undefined"){
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth:{
@@ -42,10 +40,7 @@ app.post("/", function(req, res){
       res.send("success");
     }
   })
-}else{
-  console.log("error");
-}
-})
+});
 app.post("/learn", function(req,res){
     res.sendFile(__dirname + "/learnmore.html");
 })
