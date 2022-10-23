@@ -18,6 +18,7 @@ const contactForm = document.querySelector(".email");
 let name = document.getElementById('name');
 
 let email = document.getElementById('email');
+let number = document.getElementById('number')
 let message = document.getElementById('message');
 contactForm.addEventListener('submit', function(e){
 
@@ -32,6 +33,7 @@ contactForm.addEventListener('submit', function(e){
       
         name: name.value,
         email: email.value,
+        number: number.value,
         message: message.value
     }
 
@@ -52,6 +54,7 @@ contactForm.addEventListener('submit', function(e){
 
             name.value = "";
             email.value ="";
+            number.value = "";
             message.value = "";
         }else{
           loading.remove();
