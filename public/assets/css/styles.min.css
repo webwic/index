@@ -2,7 +2,10 @@
     background: #f1f7fc;
     padding: 80px 0
 }
-
+/* //adding navbar new color */
+#nav{
+    background-color: transparent;
+}
 .contact-clean form {
     max-width: 480px;
     width: 90%;
@@ -421,7 +424,7 @@
     background: 0 0;
     padding-top: .75rem;
     padding-bottom: .75rem;
-    color: #fff;
+    color: rgb(255, 0, 0);
     border-radius: 0;
     box-shadow: none;
     border: none;

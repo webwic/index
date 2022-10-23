@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/a1306601-5b5a-4d55-8d58-e33834f0e4f5/AppServices/subscriptions/a1306601-5b5a-4d55-8d58-e33834f0e4f5/resourceGroups/webwic/providers/Microsoft.Web/sites/webwic",
+    "appService.deploySubpath": "."
+}
