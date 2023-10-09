@@ -26,5 +26,6 @@
     "nodemon": "^2.0.21",
     "qs": "^6.11.0"
   },
+  "devDependencies": {},
   "description": ""
 }
