@@ -22,7 +22,7 @@ console.log(req.body.number);
     "to": "917025996690",
     "type": "template",
     "template": {
-      "name": "webwic_contact",
+      "name": "contact",
       "language": {
         "code": "en_US"
       },
@@ -54,10 +54,10 @@ console.log(req.body.number);
 
 var config = {
   method: 'post',
-  url: 'https://graph.facebook.com/v14.0/108684778702670/messages',
+  url: 'https://graph.facebook.com/v17.0/100342539541221/messages',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer EAAPgXx7j9vYBAFXxUknTdyqAgGmWZCLSmmZAhaOYq4BXm6jAnzO8g0hsSAohzgJXFbGog2vhav5WPrplPoSHZAR4GuVNPZBFPIGZACIIdfb1MYUNw07ctZCldOqrYaZBEYKfOniEVQ24KsY1cDMicYrZCiCppVWdrxPpPQZB4Yur3BlncESIKFE4J'
+    'Authorization': 'Bearer EAAE3iH0r2E8BO9Sb3uJPK7oGV4w4NmC4ZCclANccRxIfhwn15KMeNiFlSmCR2igVYZCKuTz3wDJBEKSm7PalIxCU877RhHEJDXxzZBbxPhhZCoGGqkrsJkZCRPZCXxlKqfeADYGM2bhZAdNfgAnVElrRzPcel4pJtl6LmcvuDdcZAIizE6yoetzeFv9vwZCUJwfUo'
   },
   data : data
 };
@@ -77,42 +77,6 @@ axios(config)
 app.post("/learn", function(req,res){
     res.sendFile(__dirname + "/learnmore.html");
 })
-app.get('/webhook', (req, res) => {
-  try {
-      console.log('GET: Someone is pinging me!');
-
-      let mode = req.query['hub.mode'];
-      let token = req.query['hub.verify_token'];
-      let challenge = req.query['hub.challenge'];
-
-      if (
-          mode &&
-          token &&
-          mode === 'subscribe' &&
-          process.env.Meta_WA_VerifyToken === token
-      ) {
-          return res.status(200).send(challenge);
-      } else {
-          return res.sendStatus(403);
-      }
-  } catch (error) {
-      console.error({ error });
-      return res.sendStatus(500);
-  }
-});
-
-app.post('/webhook', async (req, res) => {
-  try {
-      console.log('POST: Someone is pinging me!');
-      // Add your processing logic here
-
-      return res.sendStatus(200);
-  } catch (error) {
-      console.error({ error });
-      return res.sendStatus(500);
-  }
-});
-
 
 
 app.listen(process.env.PORT ||"3000", function(req,res){
